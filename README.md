@@ -9,7 +9,8 @@ This repository contains three MATLAB-based optical microscopy simulations compl
 | Phase Contrast Microscopy              | Confocal Microscopy              | Optical Coherence Tomography |
 | -------------------------------------- | -------------------------------- | ---------------------------- |
 | <img width="248" height="240" alt="Screenshot 2026-06-17 at 8 11 57 PM" src="https://github.com/user-attachments/assets/38ffbdd0-f2b2-4a20-aba8-0ef261738366" />
- | ![](images/confocal_preview.png) | ![](images/oct_preview.png)  |
+ | <img width="1232" height="405" alt="Screenshot 2026-06-17 at 8 20 09 PM" src="https://github.com/user-attachments/assets/b8c96d8b-4403-460d-bf97-5d88b889d476" />
+ | <img width="639" height="504" alt="Screenshot 2026-06-17 at 8 24 06 PM" src="https://github.com/user-attachments/assets/9d53da4d-9bbc-426f-a7c9-c86f52dc22dd" />  |
 
 ---
 
@@ -82,7 +83,8 @@ This project simulates confocal fluorescence microscopy and investigates how pin
 
 ### Simulation Inputs
 
-![](images/usaf_psfs.png)
+<img width="579" height="196" alt="Screenshot 2026-06-17 at 8 20 35 PM" src="https://github.com/user-attachments/assets/4fa36358-8fb2-408d-af29-7eee376263ac" />
+
 
 Inputs included:
 
@@ -104,7 +106,8 @@ For each scan position:
 
 ### Pinhole Comparison
 
-![](images/pinhole_comparison.png)
+<img width="608" height="203" alt="Screenshot 2026-06-17 at 8 20 46 PM" src="https://github.com/user-attachments/assets/e04b6db1-f4fb-4856-8ec5-f3d6e9806c31" />
+
 
 Three pinhole radii were investigated:
 
@@ -114,13 +117,15 @@ Three pinhole radii were investigated:
 
 ### Reconstructed Confocal Images
 
-![](images/confocal_results.png)
+<img width="1232" height="405" alt="Screenshot 2026-06-17 at 8 20 09 PM" src="https://github.com/user-attachments/assets/a33b7197-548a-4135-9610-5fc60833463f" />
+
 
 Smaller pinholes rejected more out-of-focus light and improved image sharpness.
 
 ### Resolution Analysis
 
-![](images/intensity_profiles.png)
+<img width="633" height="517" alt="Screenshot 2026-06-17 at 8 21 03 PM" src="https://github.com/user-attachments/assets/98d7684f-b423-45ce-97a7-10bfaf28fadb" />
+
 
 Normalized line profiles showed:
 
@@ -147,13 +152,15 @@ This project simulates Spectral-Domain Optical Coherence Tomography (SD-OCT) usi
 
 ### Reference Pulse
 
-![](images/reference_pulse.png)
+<img width="628" height="517" alt="Screenshot 2026-06-17 at 8 22 30 PM" src="https://github.com/user-attachments/assets/4059076c-f882-4a02-bbf1-203f07db8da2" />
+
 
 A Gaussian-modulated cosine pulse was generated to represent the OCT reference arm.
 
 ### Pulse Spectrum
 
-![](images/reference_spectrum.png)
+<img width="639" height="474" alt="Screenshot 2026-06-17 at 8 22 53 PM" src="https://github.com/user-attachments/assets/450b9e08-138c-40cd-a2c0-839490d418a4" />
+
 
 The spectral response was calculated using:
 
@@ -163,13 +170,17 @@ The effects of pulse frequency and pulse width on spectral bandwidth were invest
 
 ### Pulse Interference
 
-![](images/interference_signal.png)
+<img width="649" height="484" alt="Screenshot 2026-06-17 at 8 23 26 PM" src="https://github.com/user-attachments/assets/59169fe4-7a91-460f-ba19-03697b21b3cc" />
+
+
 
 Delayed pulses were combined with the reference pulse to simulate reflections from different sample depths.
 
 ### Reflectivity Map
 
-![](images/reflectivity_map.png)
+<img width="653" height="518" alt="Screenshot 2026-06-17 at 8 23 31 PM" src="https://github.com/user-attachments/assets/555c467a-8f2d-4fd4-836f-892221be2568" />
+
+
 
 Depth information was recovered using:
 
@@ -179,7 +190,10 @@ The resulting peaks corresponded to optical path differences between reference a
 
 ### Multiple Reflectors
 
-![](images/multiple_reflectors.png)
+<img width="626" height="483" alt="Screenshot 2026-06-17 at 8 23 50 PM" src="https://github.com/user-attachments/assets/0a54ea85-2a16-47df-a4fe-a31ce5ccd01e" />
+
+<img width="639" height="504" alt="Screenshot 2026-06-17 at 8 24 06 PM" src="https://github.com/user-attachments/assets/dde3516e-d1e4-4c90-a5c8-ff19a6ad3f07" />
+
 
 Additional delayed pulses were added to simulate multiple reflecting layers.
 
