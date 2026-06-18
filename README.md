@@ -1,117 +1,210 @@
-
-
 # Optical Microscopy Simulations in MATLAB
 
 ---
 
-## Project Overview
+## Overview
 
-This collection contains three MATLAB-based simulations completed for **BE 518: Modern Optical Microscopy for Biomedical Imaging** at Boston University.
+This repository contains three MATLAB-based optical microscopy simulations completed as part of coursework in biomedical imaging. These projects explore how light interacts with biological samples and how modern imaging systems reconstruct information using Fourier optics, signal processing, and computational imaging techniques.
 
-The projects model fundamental biomedical imaging modalities using Fourier optics, signal processing, and computational image reconstruction techniques:
-
-1. **Phase Contrast Microscopy**
-2. **Confocal Microscopy**
-3. **Optical Coherence Tomography**
-
-These simulations demonstrate how optical systems transform light fields into measurable images and how computational methods can recover information that is otherwise invisible using conventional imaging techniques.
+| Phase Contrast Microscopy              | Confocal Microscopy              | Optical Coherence Tomography |
+| -------------------------------------- | -------------------------------- | ---------------------------- |
+| <img width="248" height="240" alt="Screenshot 2026-06-17 at 8 11 57 PM" src="https://github.com/user-attachments/assets/38ffbdd0-f2b2-4a20-aba8-0ef261738366" />
+ | ![](images/confocal_preview.png) | ![](images/oct_preview.png)  |
 
 ---
 
-# Project 1: Simulation of Phase Contrast Microscopy
+# Project 1: Phase Contrast Microscopy
 
-### Objective
+## Overview
 
-Model the imaging of transparent phase objects and investigate methods used to convert phase variations into observable intensity contrast.
+Transparent biological specimens often alter the phase of light without significantly changing intensity. This project investigates how phase information can be converted into visible contrast using Zernike Phase Contrast and Differential Interference Contrast (DIC) microscopy.
 
-### Techniques
+### Input Phase Object
 
-* Complex optical field propagation
-* Fourier optics
-* 4f coherent imaging systems
-* Zernike phase contrast
-* Differential Interference Contrast (DIC)
-* FFT-based image reconstruction
+<img width="284" height="293" alt="Screenshot 2026-06-17 at 8 15 42 PM" src="https://github.com/user-attachments/assets/853a7817-ee1a-4020-ac59-e14dd9a626b7" />
 
-### Key Results
 
-* Demonstrated that conventional coherent imaging fails to visualize transparent phase objects.
-* Implemented Zernike phase contrast using a Fourier-plane phase plate.
-* Compared phase-shift mask diameters and showed that smaller phase dots produced stronger contrast.
-* Simulated DIC microscopy with variable bias and shear distances.
-* Investigated how phase gradients generate pseudo-relief images.
+The rice image was normalized and modeled as a pure phase object. A uniform illumination field was propagated through the sample and represented as a complex optical field.
+
+### Conventional 4f Imaging System
+
+<img width="611" height="332" alt="Screenshot 2026-06-17 at 8 13 39 PM" src="https://github.com/user-attachments/assets/6f3b4d52-e06c-4208-a97d-c0b679ab37ff" />
+
+
+The object was propagated through a simulated 4f optical system using Fourier transforms. A circular aperture was applied in the Fourier plane, acting as a low-pass spatial filter.
+
+### Zernike Phase Contrast
+
+<img width="530" height="487" alt="Screenshot 2026-06-17 at 8 13 55 PM" src="https://github.com/user-attachments/assets/384ebba1-6b71-4c56-bf14-0832269cd312" />
+
+
+A π/2 phase-shifting dot was introduced at the center of the Fourier plane. This phase plate selectively shifts unscattered light while leaving scattered light unchanged.
+
+<img width="595" height="310" alt="Screenshot 2026-06-17 at 8 14 03 PM" src="https://github.com/user-attachments/assets/51338e0d-8212-475b-bcb3-fcd55be591ed" />
+
+
+Comparison of phase-dot diameters:
+
+* Diameter = 1/32 image width
+* Diameter = 1/8 image width
+
+The smaller phase dot produced stronger contrast because it affected primarily the background illumination.
+
+### Differential Interference Contrast (DIC)
+
+<img width="607" height="306" alt="Screenshot 2026-06-17 at 8 14 58 PM" src="https://github.com/user-attachments/assets/41240ca4-617e-48bd-9cca-53c3894e438d" />
+
+
+DIC imaging was simulated by laterally shifting optical fields and applying phase biases.
+
+Key findings:
+
+* π/2 bias produced the strongest contrast
+* ±2 pixel shear produced sharper images
+* ±4 pixel shear increased contrast but reduced resolution
+
+### Skills Demonstrated
+
+* Fourier Optics
+* Complex Field Propagation
+* Zernike Phase Contrast
+* Differential Interference Contrast
+* FFT-Based Image Reconstruction
+* MATLAB
 
 ---
 
-# Project 2: Simulation of Confocal Microscopy
+# Project 2: Confocal Microscopy
 
-### Objective
+## Overview
 
-Model confocal fluorescence microscopy through sample scanning and investigate the effect of finite pinhole size on image resolution.
+This project simulates confocal fluorescence microscopy and investigates how pinhole size affects image quality and spatial resolution.
 
-### Techniques
+### Simulation Inputs
 
-* Point Spread Functions (PSFs)
-* Optical Transfer Functions (OTFs)
-* Fourier-domain image formation
-* Sample scanning
-* Spatial filtering
-* Resolution analysis
+![](images/usaf_psfs.png)
 
-### Key Results
+Inputs included:
 
-* Simulated fluorescence excitation and detection using illumination and detection PSFs.
-* Constructed confocal images through two-dimensional sample scanning.
-* Evaluated pinhole radii of 1, 5, and 20 pixels.
-* Generated normalized line profiles for resolution analysis.
-* Demonstrated that smaller pinholes improve resolution while reducing detected signal intensity.
+* USAF Resolution Target
+* Illumination Point Spread Function
+* Detection Point Spread Function
+
+### Confocal Image Formation
+
+The sample was scanned across the optical axis using nested loops.
+
+For each scan position:
+
+1. Sample shifted using circshift()
+2. Fluorescence excitation calculated using PSF illumination
+3. Detection PSF applied using the Optical Transfer Function
+4. Signal filtered through a finite pinhole
+5. Intensity summed to generate one image pixel
+
+### Pinhole Comparison
+
+![](images/pinhole_comparison.png)
+
+Three pinhole radii were investigated:
+
+* 1 pixel
+* 5 pixels
+* 20 pixels
+
+### Reconstructed Confocal Images
+
+![](images/confocal_results.png)
+
+Smaller pinholes rejected more out-of-focus light and improved image sharpness.
+
+### Resolution Analysis
+
+![](images/intensity_profiles.png)
+
+Normalized line profiles showed:
+
+* Radius 1 produced highest resolution
+* Radius 20 produced strongest signal
+* Radius 5 provided a compromise
+
+### Skills Demonstrated
+
+* Confocal Microscopy
+* Point Spread Functions
+* Optical Transfer Functions
+* Fourier-Domain Imaging
+* Resolution Analysis
+* MATLAB
 
 ---
 
-# Project 3: Simulation of Optical Coherence Tomography (OCT)
+# Project 3: Optical Coherence Tomography (OCT)
 
-### Objective
+## Overview
 
-Simulate Spectral-Domain Optical Coherence Tomography (SD-OCT) and investigate how depth information is reconstructed from spectral interference measurements.
+This project simulates Spectral-Domain Optical Coherence Tomography (SD-OCT) using Gaussian optical pulses and Fourier-based depth reconstruction.
 
-### Techniques
+### Reference Pulse
 
-* Gaussian pulse modeling
-* Fourier transforms
-* Spectral-domain signal processing
-* Reflectivity map reconstruction
-* Interference analysis
+![](images/reference_pulse.png)
 
-### Key Results
+A Gaussian-modulated cosine pulse was generated to represent the OCT reference arm.
 
-* Generated Gaussian-modulated optical pulses.
-* Simulated interference between reference and delayed sample pulses.
-* Reconstructed depth-resolved reflectivity maps.
-* Demonstrated the relationship between temporal delay and reconstructed depth.
-* Investigated multi-reflector samples and artifact formation.
-* Showed how stronger reference signals suppress unwanted cross-interference terms.
+### Pulse Spectrum
+
+![](images/reference_spectrum.png)
+
+The spectral response was calculated using:
+
+S(f) = |FFT(E)|²
+
+The effects of pulse frequency and pulse width on spectral bandwidth were investigated.
+
+### Pulse Interference
+
+![](images/interference_signal.png)
+
+Delayed pulses were combined with the reference pulse to simulate reflections from different sample depths.
+
+### Reflectivity Map
+
+![](images/reflectivity_map.png)
+
+Depth information was recovered using:
+
+R(z) = |FFT(S(f))|²
+
+The resulting peaks corresponded to optical path differences between reference and sample reflections.
+
+### Multiple Reflectors
+
+![](images/multiple_reflectors.png)
+
+Additional delayed pulses were added to simulate multiple reflecting layers.
+
+Observed features:
+
+* Reference-to-sample peaks
+* Sample-to-sample interference peaks
+* Signal wrapping effects
+
+### Skills Demonstrated
+
+* Optical Coherence Tomography
+* Interferometry
+* Fourier Transforms
+* Spectral Analysis
+* Signal Processing
+* MATLAB
 
 ---
 
 ## Software
 
 * MATLAB
-* FFT-based numerical methods
 * Image Processing Toolbox
-
----
-
-## Learning Outcomes
-
-These projects provided hands-on experience with:
-
-* Fourier optics
-* Optical system modeling
-* Computational microscopy
-* Image formation theory
-* Signal reconstruction
-* Biomedical imaging systems
-* Frequency-domain analysis
+* FFT-Based Numerical Methods
 
 ---
 
