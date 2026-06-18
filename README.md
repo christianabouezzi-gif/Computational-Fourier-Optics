@@ -10,9 +10,9 @@ This collection contains three MATLAB-based simulations completed for **BE 518: 
 
 The projects model fundamental biomedical imaging modalities using Fourier optics, signal processing, and computational image reconstruction techniques:
 
-1. **Phase Contrast Microscopy (Homework 3)**
-2. **Confocal Microscopy (Homework 5)**
-3. **Optical Coherence Tomography (Homework 6)**
+1. **Phase Contrast Microscopy**
+2. **Confocal Microscopy**
+3. **Optical Coherence Tomography**
 
 These simulations demonstrate how optical systems transform light fields into measurable images and how computational methods can recover information that is otherwise invisible using conventional imaging techniques.
 
