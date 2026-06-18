@@ -1,3 +1,4 @@
+<img width="607" height="306" alt="Screenshot 2026-06-17 at 8 14 58 PM" src="https://github.com/user-attachments/assets/ecacdee0-0b34-4266-abe2-f8b809920ecb" />
 # Phase Contrast Microscopy Simulation in MATLAB
 
 ---
@@ -109,18 +110,22 @@ This converts phase gradients into intensity variations.
 
 ### Phase Object
 
-![Phase Object](images/phase_object.png)
+
+<img width="248" height="240" alt="Screenshot 2026-06-17 at 8 11 57 PM" src="https://github.com/user-attachments/assets/338ecf49-37da-4b73-82c8-050de82ca293" />
+
 
 ### Conventional Imaging
+![Uploading Screenshot 2026-06-17 at 8.13.39 PM.png…]()
 
-![Conventional Imaging](images/conventional_imaging.png)
 
 ### Zernike Phase Contrast
 
-![Zernike](images/zernike_comparison.png)
+<img width="595" height="310" alt="Screenshot 2026-06-17 at 8 14 03 PM" src="https://github.com/user-attachments/assets/ece69b46-b696-410a-b78d-9758c445d935" />
+
 
 ### DIC Imaging
 
+<img width="607" height="306" alt="Screenshot 2026-06-17 at 8 14 58 PM" src="https://github.com/user-attachments/assets/34d66f86-33a0-4c6a-94de-48cf7371ca6a" />
 
 
 ---
