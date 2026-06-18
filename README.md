@@ -6,10 +6,6 @@
 
 This repository contains three MATLAB-based optical microscopy simulations completed as part of coursework in biomedical imaging. These projects explore how light interacts with biological samples and how modern imaging systems reconstruct information using Fourier optics, signal processing, and computational imaging techniques.
 
-| Phase Contrast Microscopy              | Confocal Microscopy              | Optical Coherence Tomography |
-| -------------------------------------- | -------------------------------- | ---------------------------- |
-| <img width="248" height="240" alt="Screenshot 2026-06-17 at 8 11 57 PM" src="https://github.com/user-attachments/assets/38ffbdd0-f2b2-4a20-aba8-0ef261738366" />| |<img width="248" height="240" alt="Screenshot 2026-06-17 at 8 20 09 PM" src="https://github.com/user-attachments/assets/b8c96d8b-4403-460d-bf97-5d88b889d476"/>| |<img width="248" height="240" alt="Screenshot 2026-06-17 at 8 24 06 PM" src="https://github.com/user-attachments/assets/9d53da4d-9bbc-426f-a7c9-c86f52dc22dd" />|
-
 ---
 
 # Project 1: Phase Contrast Microscopy
