@@ -1,7 +1,5 @@
 # Optical Coherence Tomography (OCT) Simulation in MATLAB
 
-### Christian Abou-Ezzi
-
 ---
 
 ## Project Overview
@@ -155,3 +153,6 @@ This demonstrates how stronger reference signals improve OCT reconstruction qual
 * Spectral Analysis
 * Signal Processing
 * MATLAB
+
+## Author
+### Christian Abou-Ezzi
