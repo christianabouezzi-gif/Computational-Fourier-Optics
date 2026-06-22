@@ -1,4 +1,4 @@
-%Question 1
+
 %importing the rice image and converting it to an array
 og = imread('rice.tif');
 image = double(imread('rice.tif'));
@@ -34,7 +34,7 @@ subplot(1, 2, 2)
 phase_val = imshow(phase_shift, []);
 title('Phase image')
 %%
-%Question 2
+
 
 %aperture function should have the diameter half the size of the array
 imsize = 256;
@@ -93,7 +93,7 @@ colormap(gca, gray);
 %cant image transparent phase objects without an added modification. 
 
 %%
-%Question 3.1
+
 %Used size 256, bc array size is 256x256  
 imsize = 256;
 
@@ -185,7 +185,7 @@ colormap(gca, gray);
 
 
 %%
-%question 3.2
+
 %aperture function should have the phase shifter of small diameter 1/8 
 %times the size of the array.  
 %Used size 256, bc array size is 256x256  
@@ -267,7 +267,7 @@ disp('Why the size matters: the 1/32 size separates the background from the rice
 disp('1/32 is a better mask. It is more percise allowing for better resolution and less blurr. ')
 
 %%
-%question 4
+
 
 %aperture function should have the diameter half the size of the array
 imsize = 256;
