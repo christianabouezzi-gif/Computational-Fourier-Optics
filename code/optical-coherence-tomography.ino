@@ -1,4 +1,4 @@
-%Question 1
+
 
 %time domain, vector of time points size of 1024
 t = (0:1023);
@@ -25,7 +25,7 @@ xlabel('Time');
 ylabel('E(t)');
 title('Gaussian Envelope Cosine Pulse');
 %%
-%Question 2
+
 
 %Spectrum of my reference field
 s_f = abs(fft(E)).^2;
@@ -71,7 +71,7 @@ sgtitle('Positive Freqeuncies of the Spectrum')
 disp('When the pulse freqeuncy is increased, the spectrum is shifted to the right to higher frequencies.')
 disp('When the pulse waist increases, the spectrum amplitude increases while the spectrum becomes more narrow.')
 %%
-%question 3
+
 
 %time domain, vector of time points size of 1024
 t = (0:1023);
@@ -198,7 +198,7 @@ disp('The delayed spectrum is identical to the reference spectrum.')
 disp('A smaller delay produces wider ends.')
 disp('A larger delay produces more closely spaced ends.')
 %%
-%Question 4
+
 %reflectivity map of the combined spectrum.
 s_combined = abs(fft(E_combined)).^2;
 R_z = abs(fft(s_combined)).^2;
@@ -213,7 +213,7 @@ title('R(z) Map from Combined Spectrum');
 
 disp('The scalling factor is found by the peak index/tau, where the peak index is 121 and tau is 120, so we have 121/120 and the scaling factor is 1.008. ')
 %%
-%Question 5
+
 
 t = (0:1023);
 
@@ -271,7 +271,7 @@ sgtitle('question 5')
 disp('We have three pulses technically, the reference, the 120 delay and the 180 delay, so we have a peak for each one.')
 disp('at z=8, this is the mirror peak of the first sample pulse, at point 61, this is the interference peak of 180 and 120 delay, at 121 peak, this is the first reference sample interfering with the first delay sample. Because we have 128 points plotted, the peak at 180 is wrapped around.')
 %%
-%question 6
+
 t = (0:1023);
 
 %Oscillation freqeuncy
